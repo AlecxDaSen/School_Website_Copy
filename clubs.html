@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/hrccbadgeicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Clubs & Societies | HRCC</title>
+</head>
+
+<style>
+    .hero-section {
+  background-attachment: fixed;
+  position: relative;
+}
+
+.club-card {
+  position: relative;
+  height: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.club-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.club-bg-img {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transition: transform 0.5s ease;
+}
+.club-card:hover .club-bg-img {
+  transform: scale(1.05);
+}
+
+.glass-card .club-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.club-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  background: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+.club-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+</style>
+
+<body>
+  
+  <!-- header -->
+  <!-- navigator -->
+  
+  <div class="navbar">
+      <div class="logo">
+  
+          <img src="images/hrccbadge.png" alt="Hrcc Badge">
+          <h5 class="mainTitle">Rajasinghe Central College</h5>
+      </div>
+  
+      <div class="nav-links ">
+          <a href="index.html" class="nav-hide">Home</a>
+          <a href="gallery.html" class="nav-hide">Gallery</a>
+          <a href="events.html" class="nav-hide">Events</a>
+          <a href="academic.html" class="nav-hide">Academic</a>
+          <a href="clubs.html" class="nav-hide">Clubs & Societies</a>
+          <a href="#" class="nav-hide">Others</a>
+          <a href="aboutUs.html" class="nav-hide">About Us</a>
+      </div>
+  
+      <!-- Mobile Menu Button -->
+      <div class="menu-toggle" onclick="openSidebar();">
+          <i class="bi bi-list"></i>
+          <a href="gallery.html" class="nav-hide">Gallery</a>
+          <a href="events.html" class="nav-hide">Events</a>
+          <a href="academic.html" class="nav-hide">Academic</a>
+          <a href="clubs.html" class="nav-hide">Clubs & Societies</a>
+          <a href="#" class="nav-hide">Others</a>
+          <a href="aboutUs.html" class="nav-hide">About Us</a>
+      </div>
+  
+      <!-- Mobile Menu Button -->
+      <div class="menu-toggle" onclick="openSidebar();">
+          <i class="bi bi-list"></i>
+      </div>
+  </div>
+  
+  <!-- Sidebar (Mobile Navigation) -->
+  <div class="sidebar" id="sidebar">
+      <span class="close-btn" onclick="closeSidebar();">&times;</span>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="events.html">Events</a>
+      <a href="academic.html">Academic</a>
+      <a href="clubs.html">Clubs & Societies</a>
+      <a href="#">Others</a>
+      <a href="aboutUs.html">About Us</a>
+  </div>
+  </div>
+  
+  <!-- Sidebar (Mobile Navigation) -->
+  <div class="sidebar" id="sidebar">
+      <span class="close-btn" onclick="closeSidebar();">&times;</span>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="events.html">Events</a>
+      <a href="academic.html">Academic</a>
+      <a href="clubs.html">Clubs & Societies</a>
+      <a href="#">Others</a>
+      <a href="aboutUs.html">About Us</a>
+  </div>
+  
+  <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar();"></div>
+  
+  
+  <!-- navigator -->
+  
+  <script>
+      //navbar hide on scroll codes
+  
+      {
+  
+          const navbar = document.querySelector(".navbar");
+          let lastScroll = window.scrollY;
+  
+          window.addEventListener("scroll", () => {
+              if (lastScroll < window.scrollY) {
+                  // console.log("we are going down");
+                  navbar.classList.add("navbar_hide");
+  
+              } else {
+                  // console.log("we are going up");
+                  navbar.classList.remove("navbar_hide");
+  
+              }
+  
+              lastScroll = window.scrollY;
+  
+          });
+  
+      }
+  
+  
+  
+  
+      //nav bar hide on scroll codes
+  </script>
+  
+  <!-- header -->
+    <div class="fade-in2">
+    <div class="col-12">
+
+      <section class="position-relative text-white" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/gallery1.jpg') center/cover no-repeat; height: 70vh; ">
+            <div class="container h-100 d-flex flex-column justify-content-center align-items-start text-start">
+                <h1 class="display-4 fw-bold text-warning">Clubs & Societies</h1>
+                <p class="lead">Stay in the loop with exciting community and school activities.</p>
+                <a href="#clubs" class="btn btn-warning px-4 py-2 mt-3 rounded-pill">Have a Look !</a>
+              </div>
+
+        </section>
+    </div>
+</div>
+    <div class="container-fluid">
+
+            <!-- begin -->
+            <div class="col-10 offset-1 text-center mb-3 ">
+                <h2 class="text-secondary mt-3 mb-3">Heading toward Clubs & Societies</h2>
+
+                <p class="text-black-50 fs-6 ">Clubs and societies in a school play a vital role in students’ overall development
+                    beyond academics. They provide a platform for students to explore their interests, develop new skills, and build confidence.
+                    Whether it's drama, science, music, or debate, each club encourages teamwork, creativity, and leadership. These activities help
+                    students discover their passions, improve communication, and learn time management. Most importantly, clubs and societies
+                    create a sense of community and belonging, making school life more enjoyable and meaningful.</p>
+            </div>
+
+            <!-- begin -->
+
+
+
+        <!-- clubs cards -->
+
+        <section id="clubs" class="py-5 mt-3">
+            <div class="container">
+            <div class="row g-4 justify-content-center">
+
+           
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="club-card glass-card text-white position-relative overflow-hidden shadow-lg rounded-4 h-100">
+                    <img src="images/cadets.jpg" class="club-bg-img" alt="">
+                    <div class="club-overlay p-4">
+                        <div class="club-icon-wrapper mb-3">
+                        <img src="images/cadets.png" class="club-icon" alt=" icon">
+                        </div>
+                        <h5 class="fw-bold"></h5>
+                        <p class="small"></p>
+                        <a href="clubSingleView.html" class="btn btn-outline-warning btn-sm rounded-pill mt-2">Learn More</a>
+                    </div>
+                    </div>
+                </div>
+
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="club-card glass-card text-white position-relative overflow-hidden shadow-lg rounded-4 h-100">
+                    <img src="images/gallery7.jpg" class="club-bg-img" alt="">
+                    <div class="club-overlay p-4">
+                        <div class="club-icon-wrapper mb-3">
+                        <img src="images/photography.jpeg" class="club-icon" alt=" icon">
+                        </div>
+                        <h5 class="fw-bold"></h5>
+                        <p class="small"></p>
+                        <a href="clubSingleView.html" class="btn btn-outline-warning btn-sm rounded-pill mt-2">Learn More</a>
+                    </div>
+                    </div>
+                </div>
+
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="club-card glass-card text-white position-relative overflow-hidden shadow-lg rounded-4 h-100">
+                    <img src="images/gallery5.jpg" class="club-bg-img" alt="">
+                    <div class="club-overlay p-4">
+                        <div class="club-icon-wrapper mb-3">
+                        <img src="images/cadets.png" class="club-icon" alt=" icon">
+                        </div>
+                        <h5 class="fw-bold"></h5>
+                        <p class="small"></p>
+                        <a href="clubSingleView.html" class="btn btn-outline-warning btn-sm rounded-pill mt-2">Learn More</a>
+                    </div>
+                    </div>
+                </div>
+
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="club-card glass-card text-white position-relative overflow-hidden shadow-lg rounded-4 h-100">
+                    <img src="images/gallery1.jpg" class="club-bg-img" alt="">
+                    <div class="club-overlay p-4">
+                        <div class="club-icon-wrapper mb-3">
+                        <img src="images/scouts.png" class="club-icon" alt=" icon">
+                        </div>
+                        <h5 class="fw-bold"></h5>
+                        <p class="small"></p>
+                        <a href="clubSingleView.html" class="btn btn-outline-warning btn-sm rounded-pill mt-2">Learn More</a>
+                    </div>
+                    </div>
+                </div>
+
+                      <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="club-card glass-card text-white position-relative overflow-hidden shadow-lg rounded-4 h-100">
+                    <img src="images/gallery2.jpg" class="club-bg-img" alt="">
+                    <div class="club-overlay p-4">
+                        <div class="club-icon-wrapper mb-3">
+                        <img src="images/nature.jpeg" class="club-icon" alt=" icon">
+                        </div>
+                        <h5 class="fw-bold"></h5>
+                        <p class="small"></p>
+                        <a href="clubSingleView.html" class="btn btn-outline-warning btn-sm rounded-pill mt-2">Learn More</a>
+                    </div>
+                    </div>
+                </div>
+               
+
+            </div>
+            </div>
+        </section>
+        <!-- clubs cards -->
+
+
+
+        <!-- footer -->
+    <div class="row bg-dark">
+        <div class="col-12 p-2" style="background-color: #ffb524;"></div>
+        <div class="col-12 p-1" style="background-color: #bb2d3b;"></div>
+
+        <div class="col-10 offset-1 mt-3">
+            <div class="row">
+                <div class="col-lg-1 text-center">
+                    <img src="images/hrccbadge.png" style="height: 80px;width: auto;margin-top: 8px;" >
+                </div>
+                <div class="col-lg-4 col-sm-12 text-lg-start text-center">
+                    <span class="fs-4 text-secondary">Rajasinghe Central College</span><br>
+                    <p class="text-white ">Paradise of brave students...</p>
+
+                    <div class="">
+                        <div class="text-center text-md-start">
+
+                            <h5 class="text-uppercase text-light fw-bold mt-2 mb-2">Follow us on</h5>
+
+                            <ul class="list-unstyled list-inline">
+
+                                <li class="list-inline-item">
+                                    <a href="https://web.facebook.com/RajiansOfficial" target="_blank" rel="noopener noreferrer" class="form-floating text-white">
+                                        <img src="images/socialmedia/facebook.png" width="35px" height="35px" />
+                                    </a>
+                                </li>
+
+                            
+
+                                <li class="list-inline-item">
+                                    <a href="https://www.youtube.com/@RajasingheCentral" target="_blank" rel="noopener noreferrer" class="form-floating text-white">
+                                        <img src="images/socialmedia/youtube.png" width="35px" height="35px" />
+                                    </a>
+                                </li>
+
+                                <li class="list-inline-item">
+                                    <a href="#" target="_blank" rel="noopener noreferrer" class="form-floating text-white">
+                                        <img src="images/socialmedia/instergram.png" width="35px" height="35px" />
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-lg-5 col-sm-12 ">
+
+                            
+                        </div> -->
+
+                <div class="col-lg-4 offset-lg-3 col-sm-12 offset-sm-0 mb-3">
+                    <h5 class="text-light">Feedback</h5>
+                    <form>
+                        <input type="email" placeholder="Your email" class="form-control mb-2">
+                        <textarea placeholder="Your message" class="form-control mb-2"></textarea>
+                        <button class="btn btn-danger fw-bold w-100">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="bg-secondary mt-2 mb-2">
+        <div class="col-10  offset-1">
+            <div class="row mb-3 footerd2">
+                <div class="col-lg-3">
+                    <h4 class="text-white mt-4  ">About !</h4>
+                    <span class="text-white-50">The paradise of most excellent and proud people are born and step
+                        to the Society with high quality abilities. <br> Navigators of past and presant are move our school day by day to the victory.
+                    </span>
+                </div>
+
+                <div class="col-lg-3 ">
+                    <h4 class="text-white mt-4  ">Site Info</h4>
+                    <a href="gallery.html">Gallery</a><br>
+                    <a href="events.html">Events</a><br>
+                    <a href="academic.html">Academic</a><br>
+                    <a href="clubs.html">Clubs & Socities</a><br>
+                    <a href="#">Others</a>
+                </div>
+
+                <div class="col-lg-3">
+                    <h4 class="text-white mt-4  ">Account</h4>
+                    <a href="#">Profile</a><br>
+                    <a href="#">Exam Result Search</a><br>
+                    <a href="#">Feedbacks</a><br>
+                    <a href="#">Ticket Booking</a><br>
+                    <a href="#">Donations</a><br>
+                </div>
+
+                <div class="col-lg-3 ">
+                    <h4 class="text-white mt-4  ">Contact</h4>
+                    <a href="">Email us : <u>rajians@gmail.com</u></a><br>
+                    <a href="">Contacts : +(94) 77 0231 221</a><br>
+                    <a href="">Address us : Rajasinghe Central College, Hanwella.</a><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3 col-lg-3 mx-auto text-center text-sm-center fw-bold text-body">
+            <p class="ecrint" onclick="ecrintWeb()">&copy; ECRINT 2025 | All Rights Reserved</p>
+        </div>
+
+        <div class="p-1" style="background-color: #bb2d3b;"></div>
+    </div>
+
+    <!-- footer -->
+    </div>
+
+    
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+
+</html>
